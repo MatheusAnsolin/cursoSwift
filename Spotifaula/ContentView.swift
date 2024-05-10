@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct Song : Identifiable {
-    var id: Int
-    var name : String
-    var artist : String
-    var cover : String
-}
 
 struct ContentView: View {
     
@@ -42,7 +36,7 @@ struct ContentView: View {
                     
                     ForEach(arrayMusicas){item in
                         HStack(){
-                            NavigationLink(destination: MusicDetail(music : item),
+                            NavigationLink(destination: MusicDetail(music: item ),
                                            label:{
                                 AsyncImage(url: URL(string: "https://source.unsplash.com/random/200x200")){ image in
                                     image.resizable().aspectRatio(contentMode: .fill)
