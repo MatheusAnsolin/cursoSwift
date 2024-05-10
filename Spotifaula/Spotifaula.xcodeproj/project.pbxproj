@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6D346582BEE3A380064F7DD /* SongStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D346572BEE3A380064F7DD /* SongStructure.swift */; };
 		A6F77EB52BEA47E200CE8DAB /* SpotifaulaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F77EB42BEA47E200CE8DAB /* SpotifaulaApp.swift */; };
 		A6F77EB72BEA47E200CE8DAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F77EB62BEA47E200CE8DAB /* ContentView.swift */; };
 		A6F77EB92BEA47E300CE8DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F77EB82BEA47E300CE8DAB /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6D346572BEE3A380064F7DD /* SongStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStructure.swift; sourceTree = "<group>"; };
 		A6F77EB12BEA47E200CE8DAB /* Spotifaula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifaula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F77EB42BEA47E200CE8DAB /* SpotifaulaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifaulaApp.swift; sourceTree = "<group>"; };
 		A6F77EB62BEA47E200CE8DAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				A6F77EB42BEA47E200CE8DAB /* SpotifaulaApp.swift */,
 				A6F77EB62BEA47E200CE8DAB /* ContentView.swift */,
+				A6D346572BEE3A380064F7DD /* SongStructure.swift */,
 				A6F77EC22BEA6A8A00CE8DAB /* MusicDetail.swift */,
 				A6F77EB82BEA47E300CE8DAB /* Assets.xcassets */,
 				A6F77EBA2BEA47E300CE8DAB /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				A6F77EB72BEA47E200CE8DAB /* ContentView.swift in Sources */,
 				A6F77EC32BEA6A8A00CE8DAB /* MusicDetail.swift in Sources */,
+				A6D346582BEE3A380064F7DD /* SongStructure.swift in Sources */,
 				A6F77EB52BEA47E200CE8DAB /* SpotifaulaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
