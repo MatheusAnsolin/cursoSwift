@@ -6,22 +6,31 @@
 //
 
 import SwiftUI
-
+import Foundation
 import Charts
 
-let data2 = [
-    (categoria: "Comida", valor: 4891),
-    (categoria: "Transporte", valor: 2506),
-    (categoria: "Moradia", valor: 625),
-    (categoria: "Investimento", valor: 10000)
-     ]
-
 struct ContentView: View {
+
+//    let alimentacao : Double
+//    gastos = [descricao, data, categoria, valor]
+//    forEach(gastos){
+//    if categoria == alimentacao{
+//    alimentacao+=valor}
+//    if categoria == transporte{
+//    transporte+=valor}
+//    if categoria == moradia{
+//    moradia+=valor}
+//    if categoria == investimento{
+//    moradia+=valor} else {
+//    outro+=valor}
+    
+    @State private var showingSheet = false
     
     var body: some View {
         VStack{
+            
             Text("Grafico de Barras")
-            Chart(data2, id: \.categoria) {categoria, valor in
+            Chart(gastosResumo, id: \.categoria) {categoria, valor in
                 SectorMark(
                     angle: .value("Value", valor),
                     innerRadius: .ratio(0.618),
@@ -35,25 +44,26 @@ struct ContentView: View {
         }
         HStack{
             Button("Adcionar gasto") {
+                showingSheet.toggle()
+                
+            }.frame(width: 100)
+                .sheet(isPresented: $showingSheet) {
+                    AdcionarView()
+                }
+            Button("Adcionar investimento") {
             }.frame(width: 100)
             
-            Button("Adcionar renda") {
-            }.frame(width: 100)
-          
         }.padding()
         Text("Descrição de gastos")
         ScrollView{
-            ForEach(janeiro){gasto in
+            ForEach(GastoPorCategoria){gasto in
                 HStack{
-                    
-                    
                     Text(gasto.descricao!)
                     Spacer()
                     Text(String(gasto.valor!))
                 }.padding(.horizontal)
                 Spacer()
             }
-            
         }
     }
 }
