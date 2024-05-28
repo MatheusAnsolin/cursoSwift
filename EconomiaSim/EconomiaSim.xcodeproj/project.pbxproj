@@ -11,6 +11,7 @@
 		A6022ECE2BFF805F007F1CE7 /* ViewModelCliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6022ECD2BFF805F007F1CE7 /* ViewModelCliente.swift */; };
 		A6022ED02BFF8120007F1CE7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6022ECF2BFF8120007F1CE7 /* Model.swift */; };
 		A63715912BFE0F4C0026FA6F /* Graficos exemplos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63715902BFE0F4C0026FA6F /* Graficos exemplos.swift */; };
+		A682FC952C00C90300887C6C /* ViewModelEconomista.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682FC942C00C90300887C6C /* ViewModelEconomista.swift */; };
 		A6C487A22BFCD05C00A25285 /* EconomiaSimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C487A12BFCD05C00A25285 /* EconomiaSimApp.swift */; };
 		A6C487A42BFCD05C00A25285 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C487A32BFCD05C00A25285 /* ContentView.swift */; };
 		A6C487A62BFCD05E00A25285 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C487A52BFCD05E00A25285 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		A6022ECD2BFF805F007F1CE7 /* ViewModelCliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelCliente.swift; sourceTree = "<group>"; };
 		A6022ECF2BFF8120007F1CE7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A63715902BFE0F4C0026FA6F /* Graficos exemplos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Graficos exemplos.swift"; sourceTree = "<group>"; };
+		A682FC942C00C90300887C6C /* ViewModelEconomista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelEconomista.swift; sourceTree = "<group>"; };
 		A6C4879E2BFCD05C00A25285 /* EconomiaSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EconomiaSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C487A12BFCD05C00A25285 /* EconomiaSimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomiaSimApp.swift; sourceTree = "<group>"; };
 		A6C487A32BFCD05C00A25285 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				A6022ECF2BFF8120007F1CE7 /* Model.swift */,
 				A6022ECB2BFF6125007F1CE7 /* AdcionarView.swift */,
 				A63715902BFE0F4C0026FA6F /* Graficos exemplos.swift */,
+				A682FC942C00C90300887C6C /* ViewModelEconomista.swift */,
 				A6C487B12BFCE0FE00A25285 /* GastosResumo.swift */,
 				A6C487A52BFCD05E00A25285 /* Assets.xcassets */,
 				A6C487A72BFCD05E00A25285 /* Preview Content */,
@@ -154,6 +157,7 @@
 			files = (
 				A6022ED02BFF8120007F1CE7 /* Model.swift in Sources */,
 				A6C487A42BFCD05C00A25285 /* ContentView.swift in Sources */,
+				A682FC952C00C90300887C6C /* ViewModelEconomista.swift in Sources */,
 				A63715912BFE0F4C0026FA6F /* Graficos exemplos.swift in Sources */,
 				A6C487A22BFCD05C00A25285 /* EconomiaSimApp.swift in Sources */,
 				A6022ECC2BFF6125007F1CE7 /* AdcionarView.swift in Sources */,

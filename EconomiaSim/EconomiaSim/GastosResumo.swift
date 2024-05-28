@@ -9,12 +9,7 @@ import Foundation
 
 
 //
-let gastosResumo = [
-    (categoria: "Comida", valor: 4891),
-    (categoria: "Transporte", valor: 2506),
-    (categoria: "Moradia", valor: 625),
-    (categoria: "Investimento", valor: 10000)
-]
+// let gastosResumo = ViewModelClienw
 
 
 

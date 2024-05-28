@@ -10,19 +10,6 @@ import Foundation
 import Charts
 
 struct ContentView: View {
-
-//    let alimentacao : Double
-//    gastos = [descricao, data, categoria, valor]
-//    forEach(gastos){
-//    if categoria == alimentacao{
-//    alimentacao+=valor}
-//    if categoria == transporte{
-//    transporte+=valor}
-//    if categoria == moradia{
-//    moradia+=valor}
-//    if categoria == investimento{
-//    moradia+=valor} else {
-//    outro+=valor}
     
     @State private var showingSheet = false
     
@@ -30,43 +17,38 @@ struct ContentView: View {
         VStack{
             
             Text("Grafico de Barras")
-            Chart(gastosResumo, id: \.categoria) {categoria, valor in
+            Chart(gastosPorCategoria, id: \.categoria) { categoria, custo in
                 SectorMark(
-                    angle: .value("Value", valor),
+                    angle: .value("Value", categoria),
                     innerRadius: .ratio(0.618),
                     outerRadius: .inset(10),
                     angularInset: 1
                 )
                 .cornerRadius(4)
-                .foregroundStyle(by: .value("Product category", categoria))
-            }.padding().frame(height: 200)
-            Text("R$ 2.000").position(x:185,y:-115).frame(height: 10)
-        }
-        HStack{
-            Button("Adcionar gasto") {
-                showingSheet.toggle()
+                .foregroundStyle(by: .value("Categoria", categoria))
+            }.frame(width: 200).frame(height: 300)
+            Text("R$ 2.000").position(x:185,y:-185).frame(height: 10)
+            HStack{
+                Button("Adcionar gasto") {
+                    showingSheet.toggle()
+                    
+                }.frame(width: 100)
+                    .sheet(isPresented: $showingSheet) {
+                        AdcionarView()
+                    }
+                Button("Adcionar investimento") {
+                }.frame(width: 100)
                 
-            }.frame(width: 100)
-                .sheet(isPresented: $showingSheet) {
-                    AdcionarView()
-                }
-            Button("Adcionar investimento") {
-            }.frame(width: 100)
-            
-        }.padding()
-        Text("Descrição de gastos")
-        ScrollView{
-            ForEach(GastoPorCategoria){gasto in
-                HStack{
+            }.padding()
+            Text("Descrição de gastos")
+            ScrollView{
+                ForEach(despesas){gasto in
                     Text(gasto.descricao!)
-                    Spacer()
-                    Text(String(gasto.valor!))
-                }.padding(.horizontal)
-                Spacer()
-            }
+                }
+            Spacer()
         }
     }
-}
+        
 
 #Preview {
     ContentView()

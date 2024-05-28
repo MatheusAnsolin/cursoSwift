@@ -40,7 +40,7 @@ struct AdcionarView: View {
             TextField("Data", text: $dataSheet)
             Button("OK") {
                 showingSheet2 = false
-                janeiro.append(GastoPorCategoria(descricao: descricaoSheet, categoria: categoriaSheet, valor: valorSheet, data: dataSheet))
+//                janeiro.append(GastoPorCategoria(descricao: descricaoSheet, categoria: categoriaSheet, valor: valorSheet, data: dataSheet))
             }
         }
         .multilineTextAlignment(.center)

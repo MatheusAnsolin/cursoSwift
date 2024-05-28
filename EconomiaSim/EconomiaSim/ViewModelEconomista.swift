@@ -7,56 +7,24 @@
 
 import Foundation
 
-class ViewModel : ObservableObject {
-    @Published var gasto : [GastoPorCategoria] = []
+class ViewModelEconomista : ObservableObject {
+    @Published var dadosEconomista : [Economista] = []
     
     func fetch(){
-        guard let url = URL(string: "http://127.0.0.1:1880/banco_amigo_cliente" ) else{
+        guard let url = URL(string: "http://127.0.0.1:1880/banco_amigo_economista" ) else{
             return
         }
         
         let task = URLSession.shared.dataTask(with: url){ [weak self] data, _, error in
-                guard let data = data, error == nil else{
+            guard let data = data, error == nil else{
                 return
             }
             
             do {
-                let parsed = try JSONDecoder().decode([GastoPorCategoria].self, from: data)
+                let parsed = try JSONDecoder().decode([Economista].self, from: data)
                 
                 DispatchQueue.main.async {
-                    self?.gasto = parsed
-                }
-            }catch{
-                print(error)
-            }
-        }
-        
-        task.resume()
-    }
-    
-   /*
-    func post(){
-        
-        guard let url = URL(string: "http://127.0.0.1:1880/banco_amigo_cliente" ) else{
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = self? //definavariavel
-        {
-        
-        }
-        
-        let task = URLSession.shared.dataTask(with: url){ [weak self] data, _, error in
-                guard let data = data, error == nil else{
-                return
-            }
-            
-            do {
-                let parsed = try JSONDecoder().decode([HaPo].self, from: data)
-                
-                DispatchQueue.main.async {
-                    self?.chars = parsed
+                    self?.dadosEconomista = parsed
                 }
             }catch{
                 print(error)
@@ -66,4 +34,35 @@ class ViewModel : ObservableObject {
         task.resume()
     }
 }
-*/
+    
+   
+//func post(_ obj: Economista){
+//        
+//        guard let url = URL(string: "http://127.0.0.1:1880/banco_amigo_cliente" ) else{
+//            return
+//        }
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        request.httpBody = dadosEconomista.self?
+//        
+//        let task = URLSession.shared.dataTask(with: url){ [weak self] data, _, error in
+//                guard let data = data, error == nil else{
+//                return
+//            }
+//            
+//            do {
+//                let parsed = try JSONDecoder().decode([Economista].self, from: data)
+//                
+//                DispatchQueue.main.async {
+//                    self?.dadosEconomista = parsed
+//                    //enconde do obj
+//                }
+//            }catch{
+//                print(error)
+//            }
+//        }
+//        
+//        task.resume()
+//    }
+
+
